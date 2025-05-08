@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snow + Trusted Mods</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
+    .snowflake {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(100vh); }
+    }
+    .panel-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      width: calc(100% - 40px);
+      max-width: 1600px;
+      z-index: 10;
+    }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px;
+      border: 2px solid white;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 400px;
+    }
+    .panel:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+    .panel-title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+    .panel-link {
+      margin: 16px 0;
+      font-size: 1.1em;
+      color: white;
+      text-decoration: underline;
+      text-shadow: 0 0 8px rgba(255,255,255,0.7);
+    }
+    .panel-link:hover {
+      text-shadow: 0 0 12px rgba(255,255,255,1);
+    }
+    .panel-description {
+      font-size: 1em;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .divider {
+      width: 80%;
+      border-top: 1px solid rgba(255,255,255,0.4);
+      margin: 16px 0;
+    }
+    .panel-status {
+      font-size: 0.95em;
+      font-family: monospace;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel-container">
+    <div class="panel">
+      <div class="panel-title">Elux</div>
+      <a href="https://discord.gg/elux" target="_blank" class="panel-link">discord.gg/elux</a>
+      <div class="panel-description">Undetected, Obfuscated, paid menu. 10$ USD</div>
+      <div class="divider"></div>
+      <div class="panel-status">ratted: false</div>
+      <div class="panel-status">trusted: true</div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Revoke</div>
+      <a href="https://discord.gg/mPSZNyHHjw" target="_blank" class="panel-link">discord.gg/mPSZNyHHjw</a>
+      <div class="panel-description">Good unbanner, paid menu, paid unbanner</div>
+      <div class="divider"></div>
+      <div class="panel-status">ratted: false</div>
+      <div class="panel-status">trusted: true</div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">placeholder</div>
+      <a href="placeholder" target="_blank" class="panel-link">placeholder</a>
+      <div class="panel-description">placeholder</div>
+      <div class="divider"></div>
+      <div class="panel-status">ratted: false</div>
+      <div class="panel-status">trusted: true</div>
+    </div>
+  </div>
+  <script>
+    const numFlakes = 100;
+    function createSnowflake() {
+      const flake = document.createElement('div');
+      flake.classList.add('snowflake');
+      const size = Math.random() * 5 + 2;
+      flake.style.width = `${size}px`;
+      flake.style.height = `${size}px`;
+      flake.style.left = `${Math.random() * window.innerWidth}px`;
+      flake.style.top = `${Math.random() * -50}px`;
+      flake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      flake.style.animationDelay = `${Math.random() * 5}s`;
+      document.body.appendChild(flake);
+    }
+    for (let i = 0; i < numFlakes; i++) createSnowflake();
+  </script>
+</body>
+</html>
