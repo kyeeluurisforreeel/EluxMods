@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elux trusted mods</title>
+  <title>Elux Trusted Mods</title>
   <style>
     body {
       margin: 0;
@@ -27,13 +27,11 @@
     .panel-container {
       position: absolute;
       top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 20px;
+      right: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      width: calc(100% - 40px);
-      max-width: 1600px;
       z-index: 10;
     }
     .panel {
@@ -41,49 +39,49 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 32px;
+      padding: 24px;
       border: 2px solid white;
-      border-radius: 20px;
+      border-radius: 16px;
       background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      min-height: 400px;
+      min-height: 350px;
     }
     .panel:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255,255,255,0.5);
     }
     .panel-title {
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
-      margin-bottom: 16px;
-      text-shadow: 0 0 10px rgba(255,255,255,0.7);
-    }
-    .panel-link {
-      margin: 16px 0;
-      font-size: 1.1em;
-      color: white;
-      text-decoration: underline;
+      margin-bottom: 12px;
       text-shadow: 0 0 8px rgba(255,255,255,0.7);
     }
+    .panel-link {
+      margin: 12px 0;
+      font-size: 1em;
+      color: white;
+      text-decoration: underline;
+      text-shadow: 0 0 6px rgba(255,255,255,0.7);
+    }
     .panel-link:hover {
-      text-shadow: 0 0 12px rgba(255,255,255,1);
+      text-shadow: 0 0 10px rgba(255,255,255,1);
     }
     .panel-description {
-      font-size: 1em;
+      font-size: 0.95em;
       line-height: 1.4;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .divider {
-      width: 80%;
+      width: 60%;
       border-top: 1px solid rgba(255,255,255,0.4);
-      margin: 16px 0;
+      margin: 12px 0;
     }
     .panel-status {
-      font-size: 0.95em;
+      font-size: 0.9em;
       font-family: monospace;
-      margin: 6px 0;
+      margin: 4px 0;
     }
   </style>
 </head>
@@ -92,7 +90,7 @@
     <div class="panel">
       <div class="panel-title">Elux</div>
       <a href="https://discord.gg/elux" target="_blank" class="panel-link">discord.gg/elux</a>
-      <div class="panel-description">Undetected, Obfuscated, paid menu. 10$ USD</div>
+      <div class="panel-description">Undetected, Obfuscated, paid menu. $10 USD</div>
       <div class="divider"></div>
       <div class="panel-status">ratted: false</div>
       <div class="panel-status">trusted: true</div>
@@ -106,9 +104,25 @@
       <div class="panel-status">trusted: true</div>
     </div>
     <div class="panel">
-      <div class="panel-title">placeholder</div>
-      <a href="placeholder" target="_blank" class="panel-link">placeholder</a>
-      <div class="panel-description">placeholder</div>
+      <div class="panel-title">Null Menu</div>
+      <a href="https://discord.gg/eYFZN48yAb" target="_blank" class="panel-link">discord.gg/eYFZN48yAb</a>
+      <div class="panel-description">Paid menu, good mods.</div>
+      <div class="divider"></div>
+      <div class="panel-status">ratted: false</div>
+      <div class="panel-status">trusted: true</div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Bool Client</div>
+      <a href="https://discord.gg/DQbshwbTsU" target="_blank" class="panel-link">discord.gg/DQbshwbTsU</a>
+      <div class="panel-description">Free menu, good mods from a non-skidder dev.</div>
+      <div class="divider"></div>
+      <div class="panel-status">ratted: false</div>
+      <div class="panel-status">trusted: true</div>
+    </div>
+	<div class="panel">
+      <div class="panel-title">Not Skidded Menu</div>
+      <a href="https://discord.gg/MVhK7jYJH2" target="_blank" class="panel-link">discord.gg/MVhK7jYJH2</a>
+      <div class="panel-description">Free menu and paid menu, Good menu with good mods worth buying.</div>
       <div class="divider"></div>
       <div class="panel-status">ratted: false</div>
       <div class="panel-status">trusted: true</div>
